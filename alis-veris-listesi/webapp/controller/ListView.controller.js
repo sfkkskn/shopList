@@ -54,7 +54,6 @@ sap.ui.define([
                     .getText(textId, ["Bayram abi"])
             },
 
-
             _getMessage: function(textId) {
                 return this.getOwnerComponent()
                     .getModel("i18n")
@@ -63,5 +62,3 @@ sap.ui.define([
             }
         });
     });
-
-    
