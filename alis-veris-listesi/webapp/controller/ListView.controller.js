@@ -53,7 +53,7 @@ sap.ui.define([
                     .getResourceBundle()
                     .getText(textId, ["Bayram abi"])
             },
-            
+
 
             _getMessage: function(textId) {
                 return this.getOwnerComponent()
@@ -63,3 +63,5 @@ sap.ui.define([
             }
         });
     });
+
+    
