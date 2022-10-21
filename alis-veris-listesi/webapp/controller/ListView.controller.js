@@ -8,8 +8,8 @@ sap.ui.define([
 
         return Controller.extend("ZUXAV01.alisverislistesi.controller.ListView", {
             onInit: function () {
-                MessageToast.show(this._getText("app", []), {
-                    duration: 5000,
+                MessageToast.show(this._getText("apology", []), {
+                    duration: 3000,
                     width: "25em",
                     at: "BeginCenter"
                 })
