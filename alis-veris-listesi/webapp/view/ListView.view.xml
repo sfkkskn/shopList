@@ -1,0 +1,55 @@
+<mvc:View controllerName="ZUXAV01.alisverislistesi.controller.ListView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page title="{i18n>Username}'ın Alış Veriş Listesi"
+    
+    busy= "{listViewModel>/busy}">
+
+        <content>
+            <FlexBox direction="Column" width="100%" alignItems="Center">
+                <items>
+                    <Label text="{i18n>materials}" />
+                    <Input id="malzemeler" value="{listViewModel>/materials/malzemeler}" />
+                    <Button text="{i18n>addAction}" type="Emphasized" press=".onAddPress" />
+                </items>
+            </FlexBox>
+            
+                <Table items="{listModel>/listSet}">
+                    <columns>
+                        
+                        <Column hAlign="Center">
+                            <Text text="Sıra no" />
+                        </Column>
+
+                        <Column hAlign="Center">
+                            <Text text="Alış veriş raporu" />
+                        </Column>
+                        
+                        <!-- <Column hAlign="Center">
+                            <Text text="Tarih"/>
+                        </Column> -->
+
+                        <!-- <Column hAlign="Center">
+                            <Text text="Tamamlanma tarihi"/>
+                        </Column> -->
+                        
+                        <Column hAlign="Center">                        
+                                <Text text="İşlem Sonucu"/>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <HBox alignContent="Center" justifyContent="Center" alignItems="Center">
+                                    <Text text="{listViewModel/Sıra no>/materials/id}" />
+                                    <Text text="{listViewModel/Alış veriş raporu>/materials/malzemeler}" />
+                                    <Button type="Accept" text="{i18n>recordAction}" press="onDone" />
+                                    <Button type="Reject" text="{i18n>deleteAction}" press="onDelete" />
+                                </HBox>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </content>
+        </Page>
+</mvc:View>
